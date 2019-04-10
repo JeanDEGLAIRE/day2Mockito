@@ -1,6 +1,7 @@
 package com.gtm.training.day2Mockito.service;
 
 import static org.hamcrest.CoreMatchers.isA;
+import static org.junit.Assert.fail;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -51,6 +52,11 @@ public class ServiceTest {
 		Client result = service.saveClient(client);
 		
 		Assert.assertEquals(client, result);
+	}
+	
+	@Test
+	public void testPasTerrible() {
+		fail();
 	}
 	
 	@Test
