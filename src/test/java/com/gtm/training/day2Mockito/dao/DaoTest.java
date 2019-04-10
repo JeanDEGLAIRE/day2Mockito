@@ -1,5 +1,7 @@
 package com.gtm.training.day2Mockito.dao;
 
+import static org.junit.Assert.fail;
+
 import java.util.List;
 
 import org.junit.jupiter.api.AfterEach;
@@ -20,32 +22,37 @@ public class DaoTest {
 	void init() {
 		dao.save(new Client("Jean", "123"));
 		dao.save(new Client("Sebastien", "124"));
+		fail();
 	}
 	
 	@AfterEach
 	void flush() {
 		dao.deleteAll();
+		fail();
 	}
 		
-//	@Test
-//	public void testInsert() {		
-//		Client client = new Client("Roger", "000015");		
-//		Client result = dao.save(client);		
-//		Assertions.assertEquals(client, result);		
-//	}
+	@Test
+	public void testInsert() {		
+		Client client = new Client("Roger", "000015");		
+		Client result = dao.save(client);		
+		Assertions.assertEquals(client, result);	
+		fail();
+	}
 	
-//	@Test
-//	void testGet() {
-//		Client result = dao.getByName("Jean");
-//		Assertions.assertEquals("Jean", result.getName());
-//		Assertions.assertEquals("123", result.getAccountNumber());
-//	}
+	@Test
+	void testGet() {
+		Client result = dao.getByName("Jean");
+		Assertions.assertEquals("Jean", result.getName());
+		Assertions.assertEquals("123", result.getAccountNumber());
+		fail();
+	}
 	
 	@Test
 	void testDelete() {
 		dao.deleteByName("Jean");
 		Client nullClient = dao.getByName("Jean");
 		Assertions.assertNull(nullClient);
+		fail();
 	}
 	
 	@Test
@@ -56,6 +63,7 @@ public class DaoTest {
 		Assertions.assertEquals("123", clients.get(0).getAccountNumber());
 		Assertions.assertEquals("Sebastien", clients.get(1).getName());
 		Assertions.assertEquals("124", clients.get(1).getAccountNumber());
+		fail();
 	}
 
 }
