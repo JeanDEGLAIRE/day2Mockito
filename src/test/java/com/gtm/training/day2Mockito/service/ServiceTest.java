@@ -97,12 +97,12 @@ public class ServiceTest {
 	}
 	
 	@Test
-//	public void encoreUn() {
+	public void encoreUn() {
 		assertTrue(true);
 	}
 	
 	@Test
-	public void encore2() {
+//	public void encore2() {
 		assertTrue(true);
 	}
 	
