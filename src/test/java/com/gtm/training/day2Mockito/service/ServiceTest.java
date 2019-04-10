@@ -51,48 +51,49 @@ public class ServiceTest {
 		Client result = service.saveClient(client);
 		
 		Assert.assertEquals(client, result);
+		fail();
 	}
-	
-	@Test
-	public void testPasTerrible() {
-		assertTrue(true);
-	}
-	
-	@Test
-	public void testGet() {
-		
-		Client client = new Client("Jean", "123");
-		
-		when(dao.getByName("Jean")).thenReturn(client);
-		
-		Assert.assertEquals(client, service.getByName("Jean"));
-	}
-	
-	@Test
-	public void testDelete() {
-		
-		doNothing().when(dao).deleteByName("Jean");
-		
-		service.deleteByName("Jean");
-		
-		verify(dao, times(1)).deleteByName("Jean");
-	}
-	
-	@Test
-	public void getAll() {
-		
-		List<Client> clients = new ArrayList<>();
-		
-		clients.add(new Client("Jean", "123"));
-		clients.add(new Client("Sebastien", "124"));
-		
-		when(dao.findAll()).thenReturn(clients);
-		
-		List<Client> result =service.getAll();
-		Assertions.assertEquals(2, result.size());
-		Assertions.assertEquals("Jean", result.get(0).getName());
-		Assertions.assertEquals("123", result.get(0).getAccountNumber());
-		Assertions.assertEquals("Sebastien", result.get(1).getName());
-		Assertions.assertEquals("124", result.get(1).getAccountNumber());
-	}
+//	
+//	@Test
+//	public void testPasTerrible() {
+//		assertTrue(true);
+//	}
+//	
+//	@Test
+//	public void testGet() {
+//		
+//		Client client = new Client("Jean", "123");
+//		
+//		when(dao.getByName("Jean")).thenReturn(client);
+//		
+//		Assert.assertEquals(client, service.getByName("Jean"));
+//	}
+//	
+//	@Test
+//	public void testDelete() {
+//		
+//		doNothing().when(dao).deleteByName("Jean");
+//		
+//		service.deleteByName("Jean");
+//		
+//		verify(dao, times(1)).deleteByName("Jean");
+//	}
+//	
+//	@Test
+//	public void getAll() {
+//		
+//		List<Client> clients = new ArrayList<>();
+//		
+//		clients.add(new Client("Jean", "123"));
+//		clients.add(new Client("Sebastien", "124"));
+//		
+//		when(dao.findAll()).thenReturn(clients);
+//		
+//		List<Client> result =service.getAll();
+//		Assertions.assertEquals(2, result.size());
+//		Assertions.assertEquals("Jean", result.get(0).getName());
+//		Assertions.assertEquals("123", result.get(0).getAccountNumber());
+//		Assertions.assertEquals("Sebastien", result.get(1).getName());
+//		Assertions.assertEquals("124", result.get(1).getAccountNumber());
+//	}
 }
