@@ -69,7 +69,7 @@ public class ServiceTest {
 	}
 	
 	@Test
-//	public void testDelete() {
+	public void testDelete() {
 		
 		doNothing().when(dao).deleteByName("Jean");
 		
@@ -97,7 +97,7 @@ public class ServiceTest {
 	}
 	
 	@Test
-	public void encoreUn() {
+//	public void encoreUn() {
 		assertTrue(true);
 	}
 	
