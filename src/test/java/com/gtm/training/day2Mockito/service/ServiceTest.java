@@ -95,4 +95,34 @@ public class ServiceTest {
 		Assertions.assertEquals("Sebastien", result.get(1).getName());
 		Assertions.assertEquals("124", result.get(1).getAccountNumber());
 	}
+	
+	@Test
+	public void encoreUn() {
+		assertTrue(true);
+	}
+	
+	@Test
+	public void encore2() {
+		assertTrue(true);
+	}
+	
+	@Test
+	public void encore3() {
+		assertTrue(true);
+	}
+	
+	@Test
+	public void encore4() {
+		assertTrue(true);
+	}
+	
+	@Test
+	public void encore5() {
+		assertTrue(true);
+	}
+	
+	@Test
+	public void encore6() {
+		assertTrue(true);
+	}
 }
