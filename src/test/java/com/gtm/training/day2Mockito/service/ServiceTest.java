@@ -51,7 +51,6 @@ public class ServiceTest {
 		Client result = service.saveClient(client);
 		
 		Assert.assertEquals(client, result);
-		fail();
 	}
 	
 	@Test
@@ -67,7 +66,6 @@ public class ServiceTest {
 		when(dao.getByName("Jean")).thenReturn(client);
 		
 		Assert.assertEquals(client, service.getByName("Jean"));
-		fail();
 	}
 	
 	@Test
