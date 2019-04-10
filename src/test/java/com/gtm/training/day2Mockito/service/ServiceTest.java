@@ -25,8 +25,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.gtm.training.day2Mockito.dao.IDao;
 import com.gtm.training.day2Mockito.model.Client;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
 public class ServiceTest {
 
 	@Mock
