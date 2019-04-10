@@ -107,7 +107,7 @@ public class ServiceTest {
 	}
 	
 	@Test
-//	public void encore3() {
+	public void encore3() {
 		assertTrue(true);
 	}
 	
