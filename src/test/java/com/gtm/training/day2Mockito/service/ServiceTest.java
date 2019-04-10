@@ -79,7 +79,7 @@ public class ServiceTest {
 	}
 	
 	@Test
-	public void getAll() {
+//	public void getAll() {
 		
 		List<Client> clients = new ArrayList<>();
 		
