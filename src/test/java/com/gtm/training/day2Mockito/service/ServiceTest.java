@@ -52,10 +52,10 @@ public class ServiceTest {
 		Assert.assertEquals(client, result);
 	}
 	
-	@Test
-	public void testPasTerrible() {
-		fail();
-	}
+//	@Test
+//	public void testPasTerrible() {
+//		fail();
+//	}
 	
 	@Test
 	public void testGet() {
