@@ -53,21 +53,22 @@ public class ServiceTest {
 		Assert.assertEquals(client, result);
 		fail();
 	}
-//	
-//	@Test
-//	public void testPasTerrible() {
-//		assertTrue(true);
-//	}
-//	
-//	@Test
-//	public void testGet() {
-//		
-//		Client client = new Client("Jean", "123");
-//		
-//		when(dao.getByName("Jean")).thenReturn(client);
-//		
-//		Assert.assertEquals(client, service.getByName("Jean"));
-//	}
+	
+	@Test
+	public void testPasTerrible() {
+		assertTrue(true);
+	}
+	
+	@Test
+	public void testGet() {
+		
+		Client client = new Client("Jean", "123");
+		
+		when(dao.getByName("Jean")).thenReturn(client);
+		
+		Assert.assertEquals(client, service.getByName("Jean"));
+		fail();
+	}
 //	
 //	@Test
 //	public void testDelete() {
