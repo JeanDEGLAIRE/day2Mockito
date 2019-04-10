@@ -69,7 +69,7 @@ public class ServiceTest {
 	}
 	
 	@Test
-	public void testDelete() {
+//	public void testDelete() {
 		
 		doNothing().when(dao).deleteByName("Jean");
 		
@@ -79,7 +79,7 @@ public class ServiceTest {
 	}
 	
 	@Test
-//	public void getAll() {
+	public void getAll() {
 		
 		List<Client> clients = new ArrayList<>();
 		
