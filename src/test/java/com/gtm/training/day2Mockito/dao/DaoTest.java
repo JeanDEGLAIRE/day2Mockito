@@ -27,19 +27,19 @@ public class DaoTest {
 		dao.deleteAll();
 	}
 		
-	@Test
-	public void testInsert() {		
-		Client client = new Client("Roger", "000015");		
-		Client result = dao.save(client);		
-		Assertions.assertEquals(client, result);		
-	}
+//	@Test
+//	public void testInsert() {		
+//		Client client = new Client("Roger", "000015");		
+//		Client result = dao.save(client);		
+//		Assertions.assertEquals(client, result);		
+//	}
 	
-	@Test
-	void testGet() {
-		Client result = dao.getByName("Jean");
-		Assertions.assertEquals("Jean", result.getName());
-		Assertions.assertEquals("123", result.getAccountNumber());
-	}
+//	@Test
+//	void testGet() {
+//		Client result = dao.getByName("Jean");
+//		Assertions.assertEquals("Jean", result.getName());
+//		Assertions.assertEquals("123", result.getAccountNumber());
+//	}
 	
 	@Test
 	void testDelete() {
